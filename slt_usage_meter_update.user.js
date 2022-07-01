@@ -31,9 +31,6 @@ function myGreeting() {
     calculate();
 }
 
-function myStopFunction() {
-  clearTimeout(myTimeout);
-}
     var offPeakTotal;
     var offPeakPercentage;
     var offPeakUsed;

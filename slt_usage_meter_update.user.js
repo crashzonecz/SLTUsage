@@ -3,7 +3,7 @@
 // @namespace    https://github.com/crashzonecz/SLTUsage/
 // @version      0.2
 // @description  SLTMobitel Off Peak Usage Calculator
-// @author       CrasHz, skaveesh
+// @author       CrasHz, skaveesh, DimuthTharindu
 // @match        https://myslt.slt.lk/boardBand/summary
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=slt.lk
 // @require      https://code.jquery.com/jquery-1.12.4.min.js

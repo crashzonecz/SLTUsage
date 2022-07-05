@@ -20,13 +20,21 @@ function waitForKeyElements ( selectorTxt, actionFunction, bWaitOnce, iframeSele
 
     waitForKeyElements (".pkg-option", myGreeting);
 
+
     // Total Volume
     var totalMonthlylimit = 0;
 
 function myGreeting() {
     var myPackageBtn = document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.summary-container > a:nth-child(1) > div");
     myPackageBtn.addEventListener("click", function() {
-      calculate();
+      //calculate();
+        const myTimeout = setTimeout(myGreeting, 1000);
+
+        function myStopFunction() {
+             calculate();
+            clearTimeout(myTimeout);
+        }
+
      });
     calculate();
 }

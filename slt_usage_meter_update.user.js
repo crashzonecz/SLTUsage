@@ -36,6 +36,7 @@ function myGreeting() {
     var offPeakUsed;
     var offpeakRemaining;
     var offpeakcircleOneDot;
+    var validDate;
 
      function calculate(){
 
@@ -44,6 +45,7 @@ function myGreeting() {
          var totalElement = document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.summary-container > a:nth-child(1) > div > div > p.pkg-option");
   //var peakData = "10.0 GB USED OF 65.0 GB";
    //   var totalData = "60.5 GB USED OF 165.0 GB";
+    validDate = document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.graphBody-wrapper > div > div.d-flex.justify-content-between.align-items-center > div > div > div.carousel.carousel-slider > div > ul > li.slide.selected > div.m-auto > div > p").innerText;
     var peakData = peakElement.innerText;
     var totalData = totalElement.innerText;
 
@@ -68,7 +70,7 @@ var totalGb = matches2[1];
 
     function CreateOffPeakElement(){
 
-        var offpeakcircle = '<li class="slide selected"><div class=" m-auto" style="width: 100%;"><div class="text-center"><div class="name">Off Peak Data Usage: By CrasHz</div><div class="progress-bar-container"><div class="RCP " style="position: relative; width: 240px;"><svg width="240" height="240" viewBox="0 0 240 240" style="transform: rotate(-90deg);"><circle cx="120" cy="120" r="100" fill="none" stroke="#3077b4" stroke-width="16" stroke-dasharray="628.3185307179587, 628.3185307179587" stroke-linecap="round" class="RCP__track" style="transition: all 0.3s ease 0s;"></circle><circle cx="120" cy="120" r="100" fill="none" stroke="#3ccd6a" stroke-width="19" stroke-dasharray="'+offpeakcircleOneDot+', 628.3185307179587" stroke-dashoffset="0" stroke-linecap="round" class="RCP__progress" style="transition: all 0.3s ease 0s;"></circle></svg><div class="indicator"><p class="progress-count">' +Number(offpeakRemaining).toFixed(2)+'% </p><p class="label">  REMAINING</p></div></div></div><div class="used-of">'+parseFloat(offPeakUsed).toFixed(2)+' GB USED OF '+offPeakTotal+' GB</div><p class="text-center blue">(Valid Till : 31-Jul)</p></div></div></li>';
+        var offpeakcircle = '<li class="slide selected"><div class=" m-auto" style="width: 100%;"><div class="text-center"><div class="name">Off Peak Data Usage: By CrasHz</div><div class="progress-bar-container"><div class="RCP " style="position: relative; width: 240px;"><svg width="240" height="240" viewBox="0 0 240 240" style="transform: rotate(-90deg);"><circle cx="120" cy="120" r="100" fill="none" stroke="#3077b4" stroke-width="16" stroke-dasharray="628.3185307179587, 628.3185307179587" stroke-linecap="round" class="RCP__track" style="transition: all 0.3s ease 0s;"></circle><circle cx="120" cy="120" r="100" fill="none" stroke="#3ccd6a" stroke-width="19" stroke-dasharray="'+offpeakcircleOneDot+', 628.3185307179587" stroke-dashoffset="0" stroke-linecap="round" class="RCP__progress" style="transition: all 0.3s ease 0s;"></circle></svg><div class="indicator"><p class="progress-count">' +Number(offpeakRemaining).toFixed(2)+'% </p><p class="label">  REMAINING</p></div></div></div><div class="used-of">'+parseFloat(offPeakUsed).toFixed(2)+' GB USED OF '+offPeakTotal+' GB</div><p class="text-center blue">'+validDate+'</p></div></div></li>';
         const nnode = document.createElement("div");
         const textnode = document.createTextNode("");
         nnode.appendChild(textnode);

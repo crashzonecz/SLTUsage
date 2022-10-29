@@ -109,6 +109,12 @@ var matches2 = totalData.match(regex);
          var circilefullsize = 628.3185307179587;
          offpeakcircleOneDot = (628.3185307179587/100)*offpeakRemaining;
          CreateOffPeakElement();
+	     
+var node = document.querySelector("#root > div > div > div.banners"),
+ele = document.createElement("div");
+ele.innerHTML ='';
+ele.innerHTML = '<div class="payments"><div><div class="total-amount-row clearfix"><div class="total-label">Peak Remaining GB</div><strong class="total-amount">'+peakRemaining+' GB</strong></div><div class="total-amount-row clearfix"><div class="total-label">Offpeak Remaining GB</div><strong class="total-amount">'+offPeakRemaining+' GB</strong></div></div></div>';;
+node.parentNode.insertBefore(ele, node.nextSibling);
 
     }
 

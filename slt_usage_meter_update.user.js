@@ -33,6 +33,7 @@ function myGreeting() {
         function myStopFunction() {
              calculate();
             clearTimeout(myTimeout);
+
         }
 
      });
@@ -109,12 +110,16 @@ var matches2 = totalData.match(regex);
          var circilefullsize = 628.3185307179587;
          offpeakcircleOneDot = (628.3185307179587/100)*offpeakRemaining;
          CreateOffPeakElement();
-	     
-//var node = document.querySelector("#root > div > div > div.banners"),
-//ele = document.createElement("div");
-//ele.innerHTML ='';
-//ele.innerHTML = '<div class="payments"><div><div class="total-amount-row clearfix"><div class="total-label">Peak Remaining GB</div><strong class="total-amount">'+peakRemaining+' GB</strong></div><div class="total-amount-row clearfix"><div class="total-label">Offpeak Remaining GB</div><strong class="total-amount">'+offPeakRemaining+' GB</strong></div></div></div>';;
-//node.parentNode.insertBefore(ele, node.nextSibling);
+
+//var elemDiv = document.createElement('div');
+     // elemDiv.style.cssText = '';
+
+       // document.querySelector("#root > div > div > div.banners").innerHTML='<div class="payments"><div><div class="total-amount-row clearfix"><div class="total-label">Peak Remaining GB</div><strong class="total-amount">4.80 GB</strong></div><div class="total-amount-row clearfix"><div class="total-label">Peak Remaining GB</div><strong class="total-amount">4.80 GB</strong></div></div></div>';
+var node = document.querySelector("#root > div > div > div.banners"),
+ele = document.createElement("div");
+ele.innerHTML ='';
+ele.innerHTML = '<div class="payments"><div><div class="total-amount-row clearfix"><div class="total-label">Peak Remaining GB</div><strong class="total-amount">'+peakRemaining+' GB</strong></div><div class="total-amount-row clearfix"><div class="total-label">Offpeak Remaining GB</div><strong class="total-amount">'+offPeakRemaining+' GB</strong></div></div></div>';;
+node.parentNode.insertBefore(ele, node.nextSibling);
 
     }
 
@@ -128,6 +133,9 @@ var matches2 = totalData.match(regex);
 
         document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.graphBody-wrapper > div > div.d-flex.justify-content-between.align-items-center > div > div > div.carousel.carousel-slider > div > ul > li.slide.selected").appendChild(nnode);
         document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.graphBody-wrapper > div > div.d-flex.justify-content-between.align-items-center > div > div > div.carousel.carousel-slider > div > ul > li.slide.selected > div:nth-child(2)").innerHTML= offpeakcircle;
+       // const textnode2 = document.createTextNode();
+        //document.querySelector("#root > div > div > div.payments").appendChild(nnode);
+
 
 
     }
@@ -1036,6 +1044,8 @@ function funInsertData2Page() {
     //document.querySelector("#root > div > div > div.valueServices > p").appendChild(docFragment);
     //document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.graphBody-wrapper > div > div.d-flex.justify-content-between.align-items-center > div > div > div.carousel.carousel-slider > div > ul > li.slide.selected > div:nth-child(2) > li > div > div > p").appendChild(docFragment);
     document.querySelector("#root > div > div > div.mainBody > div.boardBandSummary.common-panel > div.graphBody-wrapper > div > div.d-flex.justify-content-between.align-items-center > div > div > div.carousel.carousel-slider > div > ul > li.slide.selected > div:nth-child(2) > li > div > div > div.FullDetails").appendChild(docFragment);
+
+   
 }
 
 
